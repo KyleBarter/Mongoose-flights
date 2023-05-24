@@ -20,4 +20,6 @@ const flightSchema = new Schema ({
         max: 9999
     },
     departs: Date
+}, {
+    timestamps: true
 })
