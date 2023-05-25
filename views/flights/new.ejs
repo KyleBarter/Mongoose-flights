@@ -1,0 +1,39 @@
+<%- include('../partials/header') %>
+
+<!-- Start of new specific code -->
+<form action="/flights" method="POST">
+
+    <!-- Airline -->
+    <label>Airline:</label>
+    <select name="airline">
+        <option value="British Airways">British Airways</option>
+        <option value="EasyJet">EasyJet</option>
+        <option value="RyanAir">RyanAir</option>
+    </select>
+    <!-- Flight No. -->
+    <label>Flight number:</label>
+    <input type="number" name="flightNo">
+
+    <!-- Destination -->
+    <label>Destination</label>
+    <select name="airport">
+      <option value="DXB">DXB</option>
+      <option value="LGW">LGW</option>
+      <option value="CPH">CPH</option>
+      <option value="ARN">ARN</option>
+      <option value="EDI">EDI</option>
+    </select>
+  
+    <!-- Departure time -->
+    <label>Departs</label>
+    <input type="date" name="departs">
+  
+    <!-- Submit -->
+    <input type="submit" value="Add Flight">
+  
+    <!-- Error -->
+    <small class="red"><%= errorMessage %></small>
+  </form>
+  <!-- End of the new specific code -->
+
+<%- include('../partials/footer') %>

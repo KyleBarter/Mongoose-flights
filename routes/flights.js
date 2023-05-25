@@ -7,6 +7,10 @@ const flightsCTRL = require('../controllers/flights')
 // Endpoint: GET /flights
 router.get('/', flightsCTRL.index)
 
+router.get('/add', flightsCTRL.new)
+
+router.post('/', flightsCTRL.create)
+
 module.exports = router;
 
 //comment

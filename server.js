@@ -4,13 +4,13 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+//routers
 const indexRouter = require('./routes/index');
 const flightsRouter = require('./routes/flights');
 
 
 //.env config
 require('dotenv').config();
-
 //mongoose implementation
 require('./config/database');
 
