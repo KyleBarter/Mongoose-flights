@@ -22,7 +22,6 @@ const flightSchema = new Schema ({
     departs: {
         type: Date,
         default: Date.now
-        //safoij
     }
 }, {
     timestamps: true
