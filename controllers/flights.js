@@ -15,9 +15,12 @@ function newFlight(req, res, next){
 }
 
 async function create(req, res, next){
+    console.log('hello')
     try {
-        const body = formatBody(req.body)
-        const createdFlight = await Flight.create(body);
+        // const body = formatBody(req.body)
+        // console.log(body)
+        const createdFlight = await Flight.create(req.body);
+        console.log('Created flight', createdFlight)
         res.redirect(`/flights/${createdFlight._id}`)
     } catch (err) {
         res.render('flights/new', { title: 'Add flight', errorMessage: err.Message })
