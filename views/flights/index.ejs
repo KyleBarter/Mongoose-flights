@@ -4,7 +4,7 @@
 
 <ul>
     <% flights.forEach(function(flight){%>
-        <li> Airline: <%= flight.airline %> | No: <%= flight.flightNo %> | To <%= flight.airport %></li>
+        <li><a href="/flights/<%= flight._id %>"> Airline: <%= flight.airline %> | No: <%= flight.flightNo %> | To <%= flight.airport %></a></li>
     <%}); %>
 </ul>
 
