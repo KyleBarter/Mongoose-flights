@@ -1,5 +1,7 @@
 const mongoose = require('mongoose')
 
+
+// ? Destination schema
 const destinationSchema = new mongoose.Schema({
     arrivalAirport: {
         type: String,
@@ -7,10 +9,12 @@ const destinationSchema = new mongoose.Schema({
     },
     arrival: {
         type: Date
-    }
+    } 
+}, {
+    timestamps: true
 })
 
-
+// ? flight schema
 const flightSchema = new mongoose.Schema ({
     airline: {
         type: String, 
@@ -31,12 +35,12 @@ const flightSchema = new mongoose.Schema ({
     departs: {
         type: Date,
         default: Date.now() + 365*24*60*60000
-    }
+    },
+    destination: [destinationSchema]
 }, {
     timestamps: true
 })
 
 module.exports = mongoose.model('Flight', flightSchema)
-module.exports = mongoose.model('Destination', destinationSchema)
 
 //comment

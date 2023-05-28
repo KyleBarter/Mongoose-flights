@@ -1,0 +1,25 @@
+<%- include('../partials/header') %>
+
+<!-- <form action="/flight/<%= flight._id %>?_method=PUT" method="POST"> -->
+
+  <% for(const key in flight){ %>
+      <% if(key !== '_id' && key !== '__v' && key !== 'destination'){ %>
+        <li><%= key[0].toUpperCase() + key.substring(1) %>: <%= flight[key] %></li>
+      <% } %>
+    <% } %>
+    <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+    <label> Add destination </label>
+    <select name="arrivalAirport">
+      <option name="LAX">LAX</option>
+      <option name="LHR">LHR</option>
+      <option name="CDG">CDG</option>
+      <option name="MAD">MAD</option>
+      <option name="SVQ">SVQ</option>
+    </select>
+    <label> Arrival date </label>
+    <input type="date" name="arrival">
+
+    <input type="submit" value="Add Destination">
+    </form>
+</form>
+<%- include('../partials/footer') %>
