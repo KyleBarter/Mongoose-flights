@@ -7,7 +7,7 @@
         <li><%= key[0].toUpperCase() + key.substring(1) %>: <%= flight[key] %></li>
       <% } %>
     <% } %>
-    <form action="/flights/<%= flight._id %>?_method=PUT" method="POST">
+    <!-- <form action="/flights/<%= flight._id %>?_method=PUT" method="POST"> -->
     <label> Add destination </label>
     <select name="arrivalAirport">
       <option name="LAX">LAX</option>

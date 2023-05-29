@@ -1,8 +1,9 @@
 const mongoose = require('mongoose')
+const Schema = mongoose.Schema;
 
 
 // ? Destination schema
-const destinationSchema = new mongoose.Schema({
+const destinationSchema = new Schema({
     arrivalAirport: {
         type: String,
         enum: ['LAX', 'LHR', 'CDG', 'MAD', 'SVQ'],
@@ -15,7 +16,7 @@ const destinationSchema = new mongoose.Schema({
 })
 
 // ? flight schema
-const flightSchema = new mongoose.Schema ({
+const flightSchema = new Schema ({
     airline: {
         type: String, 
         enum: ['British Airways', 'EasyJet', 'RyanAir']
