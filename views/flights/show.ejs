@@ -1,12 +1,21 @@
 <%- include('../partials/header') %>
 
-<!-- <form action="/flight/<%= flight._id %>?_method=PUT" method="POST"> -->
+<section id="show-page">
+  <div>Airline: </div>
+  <div><%= flight.airline %></div>
+  <div>Airport: </div>
+  <div><%= flight.airport %></div>
+  <div>Flight number: </div>
+  <div><%= flight.flightNo %></div>
+  <div>Departs: </div>
+  <div><%= flight.departs %></div>
+  <div>Destination: </div>
+  <div><%= flight.destination %></div>
+  <!-- start cast list -->
 
-  <% for(const key in flight){ %>
-      <% if(key !== '_id' && key !== '__v' && key !== 'destination'){ %>
-        <li><%= key[0].toUpperCase() + key.substring(1) %>: <%= flight[key] %></li>
-      <% } %>
-    <% } %>
+  <!-- end cast list -->
+</section>
+
     <!-- <form action="/flights/<%= flight._id %>?_method=PUT" method="POST"> -->
     <label> Add destination </label>
     <select name="arrivalAirport">
