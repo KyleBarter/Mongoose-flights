@@ -1,15 +1,15 @@
 <%- include('../partials/header') %>
 
 <section id="show-page">
-  <div>Airline: </div>
+  <div><strong>Airline: </strong></div>
   <div><%= flight.airline %></div>
-  <div>Airport: </div>
+  <div><strong>Airport: </strong></div>
   <div><%= flight.airport %></div>
-  <div>Flight number: </div>
+  <div><strong>Flight number: </strong></div>
   <div><%= flight.flightNo %></div>
-  <div>Departs: </div>
+  <div><strong>Departs: </strong></div>
   <div><%= flight.departs %></div>
-  <div>Destination: </div>
+  <div><strong>Destination: </strong></div>
   <div><%= flight.destination %></div>
   <!-- start cast list -->
 
@@ -28,7 +28,11 @@
     <label> Arrival date </label>
     <input type="date" name="arrival">
 
-    <input type="submit" value="Add Destination">
+    <input type="submit" value="Add Destination"> <br>
+
+    <label> Ticket </label>
+    <input name ="seat" required pattern="[A-F] [1-9]\d?">
+    <input type="submit" value="Add ticket"> <br>
     </form>
 </form>
 <%- include('../partials/footer') %>
